@@ -9,28 +9,28 @@ class Pokemon{
 }
 
 let pkmnList = [
-    ['Vaporeon', 'vaporeon.png', 360,
+    ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
         ['Surf', '90', '0.95'],
         ['Body Slam', '85', '0.9'],
         ['Hydro Pump', '105', '0.65'],
         ['Sludge Bomb', '70', '0.95']
     ],
-    ['Flareon', 'flareon.png', 360,
+    ['Flareon', 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png', 360,
         ['Slash', '70', '0.95'],
         ['Fire Punch', '90'],
         ['Flamethrower', '85', '0.95'],
         ['Earthquake', '100', '0.75']],
-    ['Jolteon', 'jolteon.png', 360,
+    ['Jolteon', 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png', 360,
         ['Iron Tail', '70', '0.95'],
         ['Thunderbolt', '85', '0.95'],
         ['Volt Tackle', '80', '0.95'],
         ['Thunder', '105', '0.75']],
-    ['Leafeon', 'leafeon.png', 360,
+    ['Leafeon', 'https://img.pokemondb.net/sprites/black-white/normal/leafeon.png', 360,
         ['Solarbeam', '95', '0.9'],
         ['Razor Leaf', '85', '0.95'],
         ['Sludge Bomb', '80', '0.95'],
         ['Pursuit','70', '0.95' ]],
-    ['Espeon', 'espeon.png', 360,
+    ['Espeon', 'https://img.pokemondb.net/sprites/black-white/normal/espeon.png', 360,
         ['Psybeam', '85', '0.95'],
         ['Crunch', '75', '0.95'],
         ['Nightmare', '90', '0.9'],
@@ -115,7 +115,9 @@ function attack(move, attacker, receiver, HP, owner){
                 } break;
             }
         }
-        power *= scale
+        power *= scale;
+        receiver.HP -=Math.floor(power);
+        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.HP + receiver.fullHP + '</p>';
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
@@ -123,6 +125,14 @@ function attack(move, attacker, receiver, HP, owner){
     }
 }
 
-function checkWinner(){
+function checkWinner(HP){
+    let f = (pk1.HP <= 0) ? pk1 : (pk2.HP <=0) ? pk2 : false;
+    if(f!=false) {
+        alert('GAME OVER! ' + f.name +' has fainted!');
+        document.getElementById(HP).innerHTML = '<p>HP: 0/' + f.fullHP + '</p>';
+        setTimeout(function(){
+            location.reload;
+        }, 1500)
+    } 
 
 }
