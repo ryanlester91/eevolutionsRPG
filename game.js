@@ -37,6 +37,16 @@ let pkmnList = [
         ['Psychic', '95', '0.85']]
 ];
 
+let typeMatch = {
+    'Vaporeon': [[''], ['electric', 'grass'], ['']],
+    'Flareon': [[''], ['water'], ['']],
+    'Jolteon': [[''], [''], ['']],
+    'Leafeon': [[''], ['fire'], ['']],
+    'Espeon': [[''], [''], ['']]
+
+}
+
+
 function spawn(bool){
     let p = pkmnList[Math.floor(Math.random()*pkmnList.length)]
     let pkmn = new Pokemon(p[0], p[1], p[2], p[3], p[4]);
@@ -69,11 +79,48 @@ for(i=0; i<5; i++){
             setTimeout(attack, 2000, pk2.moves[Math.floor(Math.random()*3)], pk2, pk1, 'hp1', 'Enemy ')
         })
     }
+    addHandler(btn, move, pk1, pk2)
 }
 
 
-function attack(){
+function attack(move, attacker, receiver, HP, owner){
+    document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + 'used ' + move[0] + '!</p>'
+    if(Math.random() < move[4]){
+        let power = move[2] += Math.floor(Math.random()*10);
+        let rtype = typeMatch[receiver.name];
+        let mtype = move[1];
+        let scale = 1;
 
+        for(i=0; i<rtype.length; i++){
+            if(rtype[i].include(mtype)){
+                switch(i){
+                    case 0:
+                        scale = 0;
+                        setTimeout(function(){
+                            document.getElementById('comment').innerHTML = '<p>It had no effect!</p>'
+                        }, 1000);
+                        break;
+                        case 1:
+                        scale = 2;
+                        setTimeout(function(){
+                            document.getElementById('comment').innerHTML = '<p>It was super effective!</p>'
+                        }, 1000);
+                        break;
+                        case 2:
+                        scale = 0.5;
+                        setTimeout(function(){
+                            document.getElementById('comment').innerHTML = '<p>It was not very effective!</p>'
+                        }, 1000);
+                        break;
+                } break;
+            }
+        }
+        power *= scale
+    } else {
+        setTimeout(function(){
+            document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
+        })
+    }
 }
 
 function checkWinner(){
