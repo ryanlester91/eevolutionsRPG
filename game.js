@@ -10,31 +10,35 @@ class Pokemon{
 
 let pkmnList = [
     ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
-        ['Surf', '90', '0.95'],
+        [['Surf', '90', '0.95'],
         ['Body Slam', '85', '0.9'],
         ['Hydro Pump', '105', '0.65'],
-        ['Sludge Bomb', '70', '0.95']
+        ['Sludge Bomb', '70', '0.95']]
     ],
     ['Flareon', 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png', 360,
-        ['Slash', '70', '0.95'],
+        [['Slash', '70', '0.95'],
         ['Fire Punch', '90'],
         ['Flamethrower', '85', '0.95'],
-        ['Earthquake', '100', '0.75']],
+        ['Earthquake', '100', '0.75']]
+    ],
     ['Jolteon', 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png', 360,
-        ['Iron Tail', '70', '0.95'],
+        [['Iron Tail', '70', '0.95'],
         ['Thunderbolt', '85', '0.95'],
         ['Volt Tackle', '80', '0.95'],
-        ['Thunder', '105', '0.75']],
+        ['Thunder', '105', '0.75']]
+    ],
     ['Leafeon', 'https://img.pokemondb.net/sprites/black-white/normal/leafeon.png', 360,
-        ['Solarbeam', '95', '0.9'],
+        [['Solarbeam', '95', '0.9'],
         ['Razor Leaf', '85', '0.95'],
         ['Sludge Bomb', '80', '0.95'],
-        ['Pursuit','70', '0.95' ]],
+        ['Pursuit','70', '0.95' ]]
+],
     ['Espeon', 'https://img.pokemondb.net/sprites/black-white/normal/espeon.png', 360,
-        ['Psybeam', '85', '0.95'],
+        [['Psybeam', '85', '0.95'],
         ['Crunch', '75', '0.95'],
         ['Nightmare', '90', '0.9'],
         ['Psychic', '95', '0.85']]
+    ]
 ];
 
 let typeMatch = {
@@ -49,11 +53,11 @@ let typeMatch = {
 
 function spawn(bool){
     let p = pkmnList[Math.floor(Math.random()*pkmnList.length)]
-    let pkmn = new Pokemon(p[0], p[1], p[2], p[3], p[4]);
+    let pkmn = new Pokemon(p[0], p[1], p[2], p[3]);
 
     if(bool){
-        for(i=0; i<5; i++){
-            document.getElementById('m'+i).value = pkmn.moves[0];
+        for(i=0; i<4; i++){
+            document.getElementById('m'+i).value = pkmn.moves[i][0];
         }
     } return pkmn;
 }
@@ -83,7 +87,7 @@ for(i=0; i<5; i++){
 }
 
 
-function attack(move, attacker, receiver, HP, owner){
+/*function attack(move, attacker, receiver, HP, owner){
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + 'used ' + move[0] + '!</p>'
     if(Math.random() < move[4]){
         let power = move[2] += Math.floor(Math.random()*10);
@@ -136,3 +140,5 @@ function checkWinner(HP){
     } 
 
 }
+checkWinner()
+attack()*/

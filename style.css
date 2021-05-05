@@ -1,5 +1,6 @@
 th, td {
     padding: 15px;
+    background: blue;
 }
 
 .btn {
@@ -7,3 +8,6 @@ th, td {
     width: 100%
 }
 
+p {
+    font-family:'Courier New', Courier, monospace;
+}
