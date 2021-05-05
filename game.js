@@ -1,0 +1,28 @@
+let pkmnList = [
+    ['Vaporeon', 360,
+        ['Surf', '90', '0.95'],
+        ['Body Slam', '85', '0.9'],
+        ['Hydro Pump', '105', '0.65'],
+        ['Sludge Bomb', '70', '0.95']
+    ],
+    ['Flareon', 360,
+        ['Slash', '70', '0.95'],
+        ['Fire Punch', '90'],
+        ['Flamethrower', '85', '0.95'],
+        ['Earthquake', '100', '0.75']],
+    ['Jolteon', 360,
+        ['Iron Tail', '70', '0.95'],
+        ['Thunderbolt', '85', '0.95'],
+        ['Volt Tackle', '80', '0.95'],
+        ['Thunder', '105', '0.75']],
+    ['Leafeon', 360,
+        ['Solarbeam', '95', '0.9'],
+        ['Razor Leaf', '85', '0.95'],
+        ['Sludge Bomb', '80', '0.95'],
+        ['Pursuit','70', '0.95' ]],
+    ['Espeon', 360,
+        ['Psybeam', '85', '0.95'],
+        ['Crunch', '75', '0.95'],
+        ['Nightmare', '90', '0.9'],
+        ['Psychic', '95', '0.85']]
+]
