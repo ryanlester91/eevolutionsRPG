@@ -10,34 +10,34 @@ class Pokemon{
 
 let pkmnList = [
     ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
-        [['Surf', '90', '0.95'],
-        ['Body Slam', '85', '0.9'],
-        ['Hydro Pump', '105', '0.65'],
-        ['Sludge Bomb', '70', '0.95']]
+        [['Surf', 'water', '90', '0.95'],
+        ['Body Slam', 'normal', '85', '0.9'],
+        ['Hydro Pump', 'water', '105', '0.65'],
+        ['Sludge Bomb', 'poison', '70', '0.95']]
     ],
     ['Flareon', 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png', 360,
-        [['Slash', '70', '0.95'],
-        ['Fire Punch', '90'],
+        [['Slash', 'normal', '70', '0.95'],
+        ['Fire Punch','fire', '90', '0.9'],
         ['Flamethrower', '85', '0.95'],
         ['Earthquake', '100', '0.75']]
     ],
     ['Jolteon', 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png', 360,
-        [['Iron Tail', '70', '0.95'],
-        ['Thunderbolt', '85', '0.95'],
-        ['Volt Tackle', '80', '0.95'],
-        ['Thunder', '105', '0.75']]
+        [['Iron Tail', 'steel', '70', '0.95'],
+        ['Thunderbolt', 'electric', '85', '0.95'],
+        ['Volt Tackle', 'electric', '80', '0.95'],
+        ['Thunder','electric', '105', '0.75']]
     ],
     ['Leafeon', 'https://img.pokemondb.net/sprites/black-white/normal/leafeon.png', 360,
-        [['Solarbeam', '95', '0.9'],
-        ['Razor Leaf', '85', '0.95'],
-        ['Sludge Bomb', '80', '0.95'],
-        ['Pursuit','70', '0.95' ]]
+        [['Solarbeam', 'grass', '95', '0.9'],
+        ['Razor Leaf', 'grass', '85', '0.95'],
+        ['Sludge Bomb', 'poison', '80', '0.95'],
+        ['Dig', 'ground', '75', '0.95' ]]
 ],
     ['Espeon', 'https://img.pokemondb.net/sprites/black-white/normal/espeon.png', 360,
-        [['Psybeam', '85', '0.95'],
-        ['Crunch', '75', '0.95'],
-        ['Nightmare', '90', '0.9'],
-        ['Psychic', '95', '0.85']]
+        [['Psybeam', 'psychic', '85', '0.95'],
+        ['Crunch', 'normal', '75', '0.95'],
+        ['Nightmare', 'ghost', '90', '0.9'],
+        ['Psychic', 'psychic', '95', '0.85']]
     ]
 ];
 
