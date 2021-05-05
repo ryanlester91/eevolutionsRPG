@@ -1,6 +1,9 @@
+body {
+    background: #7e191b;
+}
 th, td {
     padding: 15px;
-    background: blue;
+    background: lightgray;
 }
 
 .btn {

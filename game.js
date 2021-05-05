@@ -74,7 +74,7 @@ s2.src = pk2.sprite;
 document.getElementById('pk2').appendChild(s2);
 document.getElementById('hp2').innerHTML = '<p>HP: ' + pk2.HP + '/' + pk2.fullHP + '</p>';
 
-for(i=0; i<5; i++){
+for(i=0; i<4; i++){
     let btn = document.getElementById('m'+i);
     let move = pk1.moves[i];
     function addHandler(btn, move, pk1, pk2) {
@@ -87,9 +87,9 @@ for(i=0; i<5; i++){
 }
 
 
-/*function attack(move, attacker, receiver, HP, owner){
+function attack(move, attacker, receiver, HP, owner){
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + 'used ' + move[0] + '!</p>'
-    if(Math.random() < move[4]){
+    if(Math.random() < move[3]){
         let power = move[2] += Math.floor(Math.random()*10);
         let rtype = typeMatch[receiver.name];
         let mtype = move[1];
@@ -140,5 +140,5 @@ function checkWinner(HP){
     } 
 
 }
-checkWinner()
-attack()*/
+
+
