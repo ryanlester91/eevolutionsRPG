@@ -18,8 +18,8 @@ let pkmnList = [
     ['Flareon', 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png', 360,
         [['Slash', 'normal', '70', '0.95'],
         ['Fire Punch','fire', '90', '0.9'],
-        ['Flamethrower', '85', '0.95'],
-        ['Earthquake', '100', '0.75']]
+        ['Flamethrower', 'fire', '85', '0.95'],
+        ['Earthquake', 'ground', '100', '0.75']]
     ],
     ['Jolteon', 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png', 360,
         [['Iron Tail', 'steel', '70', '0.95'],
@@ -38,7 +38,36 @@ let pkmnList = [
         ['Crunch', 'normal', '75', '0.95'],
         ['Nightmare', 'ghost', '90', '0.9'],
         ['Psychic', 'psychic', '95', '0.85']]
+    ],
+
+    ['Sylveon', 'https://img.pokemondb.net/sprites/x-y/normal/sylveon.png', 360,
+        [['Confusion', 'psychic', '85', '0.9'],
+        ['DoubleSlap', 'normal', '75', '0.95'],
+        ['Sweet Kiss', 'fairy', '90', '0.9'],
+        ['Taunt', 'normal', '70', '0.95']]
+    ],
+
+    ['Eevee', 'https://img.pokemondb.net/sprites/black-white/normal/eevee.png', 360,
+        [['Low Kick', 'fighting', '90', '0.75'],
+        ['Bite', 'normal', '75', '0.95'],
+        ['Iron Tail', 'steel', '70', '0.95'],
+        ['Dig', 'ground', '80', '0.85']]
+    ],
+
+    ['Umbreon', 'https://img.pokemondb.net/sprites/black-white/normal/umbreon.png', 360,
+        [['Comet Punch', 'fighting', '90', '0.8'],
+        ['Black Hole Eclipse', 'dark', '110', '0.65'],
+        ['Faint Attack', 'dark', '70', '0.95'],
+        ['Crunch', 'dark', '80', '0.95']]
+    ],
+
+    ['Glaceon', 'https://img.pokemondb.net/sprites/x-y/normal/glaceon.png', 360,
+        [['Whirlwind', 'flying', '70', '0.95'],
+        ['Bubblebeam', 'water', '90', '0.9'],
+        ['Blizzard', 'ice', '110', '0.65'],
+        ['Ice Spikes', 'ice', '80', '0.95']]
     ]
+
 ];
 
 let typeMatch = {
@@ -46,7 +75,11 @@ let typeMatch = {
     'Flareon': [[''], ['water'], ['']],
     'Jolteon': [[''], [''], ['']],
     'Leafeon': [[''], ['fire'], ['']],
-    'Espeon': [[''], [''], ['']]
+    'Espeon': [[''], [''], ['']],
+    'Sylveon': [[''], [''], ['']],
+    'Eevee': [[''], [''], ['']],
+    'Umbreon': [[''], [''], ['']],
+    'Glaceon': [[''], [''], ['']]
 
 }
 
@@ -88,7 +121,7 @@ for(i=0; i<4; i++){
 
 
 function attack(move, attacker, receiver, HP, owner){
-    document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + 'used ' + move[0] + '!</p>'
+    document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + ' used ' + move[0] + '!</p>'
     if(Math.random() < move[3]){
         let power = move[2] += Math.floor(Math.random()*10);
         let rtype = typeMatch[receiver.name];
