@@ -1,6 +1,13 @@
 body {
     background: #7e191b;
 }
+
+h1 {
+    font-family: Impact;
+    color: white;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px black;
+}
 th, td {
     padding: 15px;
     background: lightgray;
