@@ -77,7 +77,7 @@ let typeMatch = {
     'Leafeon': [['grass'], ['fire', 'ice', 'poison','flying'], ['electric']],
     'Espeon': [['psychic'], ['dark', 'steel'], ['fighting, psychic']],
     'Sylveon': [['fairy'], ['fire', 'steel'], ['fighting', 'dark']],
-    'Eevee': [['normal'], ['steel', 'rock'], ['psychic']],
+    'Eevee': [['normal'], ['steel', 'rock'], ['ghost']],
     'Umbreon': [['dark'], ['fighting', 'fairy'], ['psychic']],
     'Glaceon': [['ice'], ['steel','fire', 'water'], ['ice']]
 
