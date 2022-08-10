@@ -71,15 +71,15 @@ let pkmnList = [
 ];
 
 let typeMatch = {
-    'Vaporeon': [[''], ['electric', 'grass'], ['']],
-    'Flareon': [[''], ['water'], ['']],
-    'Jolteon': [[''], [''], ['']],
-    'Leafeon': [[''], ['fire'], ['']],
-    'Espeon': [[''], [''], ['']],
-    'Sylveon': [[''], [''], ['']],
-    'Eevee': [[''], [''], ['']],
-    'Umbreon': [[''], [''], ['']],
-    'Glaceon': [[''], [''], ['']]
+    'Vaporeon': [['water'], ['electric', 'grass'], ['ice']],
+    'Flareon': [['fire'], ['water', 'rock'], ['grass']],
+    'Jolteon': [['electric'], ['ground', 'grass'], ['ice', 'flying']],
+    'Leafeon': [['grass'], ['fire', 'ice', 'poison','flying'], ['electric']],
+    'Espeon': [['psychic'], ['dark', 'steel'], ['fighting, psychic']],
+    'Sylveon': [['fairy'], ['fire', 'steel'], ['fighting', 'dark']],
+    'Eevee': [['normal'], ['steel', 'rock'], ['psychic']],
+    'Umbreon': [['dark'], ['fighting', 'fairy'], ['psychic']],
+    'Glaceon': [['ice'], ['steel','fire', 'water'], ['ice']]
 
 }
 
