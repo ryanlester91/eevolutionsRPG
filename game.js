@@ -107,7 +107,7 @@ s2.src = pk2.sprite;
 document.getElementById('pk2').appendChild(s2);
 document.getElementById('hp2').innerHTML = '<p>HP: ' + pk2.HP + '/' + pk2.fullHP + '</p>';
 
-for(i=0; i<5; i++){
+for(i=0; i<4; i++){
     let btn = document.getElementById('m'+i);
     let move = pk1.moves[i];
     function addHandler(btn, move, pk1, pk2) {
