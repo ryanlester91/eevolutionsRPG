@@ -120,7 +120,7 @@ for(i=0; i<5; i++){
 }
 
 
-function attack(move, attacker, receiver, HP, owner){
+function attack(move, attacker, receiver, HP, newHP, owner){
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + ' used ' + move[0] + '!</p>'
     if(Math.random() < move[3]){
         let power = move[2] += Math.floor(Math.random()*10);
@@ -155,8 +155,8 @@ function attack(move, attacker, receiver, HP, owner){
         }
         power *= scale;
         //receiver.HP -=Math.floor(power);
-        receiver.HP -= damagePoints
-        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.HP + receiver.fullHP + '</p>';
+        receiver.newHP = receiver.HP - damagePoints;
+        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + receiver.fullHP + '</p>';
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
