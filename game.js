@@ -130,7 +130,7 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         let scale = 1;
         let damagePoints = move[4];
       
-        /*for(i=0; i<rtype.length; i++){
+        for(i=0; i<rtype.length; i++){
             if(rtype[i].include(mtype)){
                 switch(i){
                     case 0:
@@ -153,9 +153,9 @@ function attack(move, attacker, receiver, HP, newHP, owner){
                         break;
                 } break;
             }
-        }*/
+        }
         power *= scale;
-        receiver.HP -=Math.floor(power);
+        //receiver.HP -=Math.floor(power);
       for(i=0; i<damagePoints.length; i++){
         HP = receiver.HP - damagePoints;
         } return HP
