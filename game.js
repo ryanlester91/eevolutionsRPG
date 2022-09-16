@@ -3,6 +3,7 @@ class Pokemon{
         this.name = name;
         this.sprite = sprite;
         this.HP = HP;
+        this.newHP = HP;
         this.fullHP = HP;
         this.moves = moves;
     }
