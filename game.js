@@ -10,62 +10,62 @@ class Pokemon{
 
 let pkmnList = [
     ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
-        [['Surf', 'water', '90', '0.95'],
-        ['Body Slam', 'normal', '85', '0.9'],
-        ['Hydro Pump', 'water', '105', '0.65'],
-        ['Sludge Bomb', 'poison', '70', '0.95']]
+        [['Surf', 'water', '90', '0.95', '30'],
+        ['Body Slam', 'normal', '85', '0.9', '30'],
+        ['Hydro Pump', 'water', '105', '0.65', '30'],
+        ['Sludge Bomb', 'poison', '70', '0.95', '30']]
     ],
     ['Flareon', 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png', 360,
-        [['Slash', 'normal', '70', '0.95'],
-        ['Fire Punch','fire', '90', '0.9'],
-        ['Flamethrower', 'fire', '85', '0.95'],
-        ['Earthquake', 'ground', '100', '0.75']]
+        [['Slash', 'normal', '70', '0.95','30'],
+        ['Fire Punch','fire', '90', '0.9','30'],
+        ['Flamethrower', 'fire', '85', '0.95','30'],
+        ['Earthquake', 'ground', '100', '0.75', '30']]
     ],
     ['Jolteon', 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png', 360,
-        [['Iron Tail', 'steel', '70', '0.95'],
-        ['Thunderbolt', 'electric', '85', '0.95'],
-        ['Volt Tackle', 'electric', '80', '0.95'],
-        ['Thunder','electric', '105', '0.75']]
+        [['Iron Tail', 'steel', '70', '0.95', '30'],
+        ['Thunderbolt', 'electric', '85', '0.95','30'],
+        ['Volt Tackle', 'electric', '80', '0.95','30'],
+        ['Thunder','electric', '105', '0.75','30']]
     ],
     ['Leafeon', 'https://img.pokemondb.net/sprites/black-white/normal/leafeon.png', 360,
-        [['Solarbeam', 'grass', '95', '0.9'],
-        ['Razor Leaf', 'grass', '85', '0.95'],
-        ['Sludge Bomb', 'poison', '80', '0.95'],
-        ['Dig', 'ground', '75', '0.95' ]]
+        [['Solarbeam', 'grass', '95', '0.9', '30'],
+        ['Razor Leaf', 'grass', '85', '0.95','30'],
+        ['Sludge Bomb', 'poison', '80', '0.95','30'],
+        ['Dig', 'ground', '75', '0.95','30']]
 ],
     ['Espeon', 'https://img.pokemondb.net/sprites/black-white/normal/espeon.png', 360,
-        [['Psybeam', 'psychic', '85', '0.95'],
-        ['Crunch', 'normal', '75', '0.95'],
-        ['Nightmare', 'ghost', '90', '0.9'],
-        ['Psychic', 'psychic', '95', '0.85']]
+        [['Psybeam', 'psychic', '85', '0.95', '30'],
+        ['Crunch', 'normal', '75', '0.95','30'],
+        ['Nightmare', 'ghost', '90', '0.9','30'],
+        ['Psychic', 'psychic', '95', '0.85','30']]
     ],
 
     ['Sylveon', 'https://img.pokemondb.net/sprites/x-y/normal/sylveon.png', 360,
-        [['Confusion', 'psychic', '85', '0.9'],
-        ['DoubleSlap', 'normal', '75', '0.95'],
-        ['Sweet Kiss', 'fairy', '90', '0.9'],
-        ['Taunt', 'normal', '70', '0.95']]
+        [['Confusion', 'psychic', '85', '0.9', '30'],
+        ['DoubleSlap', 'normal', '75', '0.95', '30'],
+        ['Sweet Kiss', 'fairy', '90', '0.9', '30'],
+        ['Taunt', 'normal', '70', '0.95', '30']]
     ],
 
     ['Eevee', 'https://img.pokemondb.net/sprites/black-white/normal/eevee.png', 360,
-        [['Low Kick', 'fighting', '90', '0.75'],
-        ['Bite', 'normal', '75', '0.95'],
-        ['Iron Tail', 'steel', '70', '0.95'],
-        ['Dig', 'ground', '80', '0.85']]
+        [['Low Kick', 'fighting', '90', '0.75', '30'],
+        ['Bite', 'normal', '75', '0.95', '30'],
+        ['Iron Tail', 'steel', '70', '0.95', '30'],
+        ['Dig', 'ground', '80', '0.85', '30']]
     ],
 
     ['Umbreon', 'https://img.pokemondb.net/sprites/black-white/normal/umbreon.png', 360,
-        [['Comet Punch', 'fighting', '90', '0.8'],
-        ['Black Hole Eclipse', 'dark', '110', '0.65'],
-        ['Faint Attack', 'dark', '70', '0.95'],
-        ['Crunch', 'dark', '80', '0.95']]
+        [['Comet Punch', 'fighting', '90', '0.8', '30'],
+        ['Black Hole Eclipse', 'dark', '110', '0.65', '30'],
+        ['Faint Attack', 'dark', '70', '0.95', '30'],
+        ['Crunch', 'dark', '80', '0.95', '30']]
     ],
 
     ['Glaceon', 'https://img.pokemondb.net/sprites/x-y/normal/glaceon.png', 360,
-        [['Whirlwind', 'flying', '70', '0.95'],
-        ['Bubblebeam', 'water', '90', '0.9'],
-        ['Blizzard', 'ice', '110', '0.65'],
-        ['Ice Spikes', 'ice', '80', '0.95']]
+        [['Whirlwind', 'flying', '70', '0.95','30'],
+        ['Bubblebeam', 'water', '90', '0.9', '30'],
+        ['Blizzard', 'ice', '110', '0.65', '30'],
+        ['Ice Spikes', 'ice', '80', '0.95', '30']]
     ]
 
 ];
@@ -86,7 +86,7 @@ let typeMatch = {
 
 function spawn(bool){
     let p = pkmnList[Math.floor(Math.random()*pkmnList.length)]
-    let pkmn = new Pokemon(p[0], p[1], p[2], p[3]);
+    let pkmn = new Pokemon(p[0], p[1], p[2], p[3], p[4]);
 
     if(bool){
         for(i=0; i<4; i++){
@@ -107,7 +107,7 @@ s2.src = pk2.sprite;
 document.getElementById('pk2').appendChild(s2);
 document.getElementById('hp2').innerHTML = '<p>HP: ' + pk2.HP + '/' + pk2.fullHP + '</p>';
 
-for(i=0; i<4; i++){
+for(i=0; i<5; i++){
     let btn = document.getElementById('m'+i);
     let move = pk1.moves[i];
     function addHandler(btn, move, pk1, pk2) {
@@ -153,8 +153,9 @@ function attack(move, attacker, receiver, HP, owner){
             }
         }
         power *= scale;
-        receiver.HP -=Math.floor(power);
-        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.HP + receiver.fullHP + '</p>';
+        //receiver.HP -=Math.floor(power);
+        newHP = move[4] - receiver.HP
+        document.getElementById(HP).innerHTML = '<p>HP: ' + newHP + receiver.fullHP + '</p>';
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
