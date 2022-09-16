@@ -156,7 +156,7 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         }*/
         power *= scale;
         //receiver.HP -=Math.floor(power);
-        receiver.newHP = receiver.HP - damagePoints;
+        receiver.newHP -= receiver.HP - damagePoints;
         document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
     } else {
         setTimeout(function(){
