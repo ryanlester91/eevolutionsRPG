@@ -157,10 +157,10 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         //power *= scale;
         //receiver.HP -=Math.floor(power);
       for(i=0; i<damagePoints.length; i++){
-        HP = receiver.HP - damagePoints;
-        } return HP
+        receiver.newHP = receiver.HP - damagePoints;
+        } return receiver.newHP
 
-        document.getElementById(HP).innerHTML = '<p>HP: ' + HP + '/' + receiver.fullHP + '</p>';
+        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
