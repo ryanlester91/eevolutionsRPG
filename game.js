@@ -120,7 +120,7 @@ for(i=0; i<5; i++){
 }
 
 
-function attack(move, attacker, receiver, HP, owner){
+function attack(move, attacker, receiver, HP, newHP, owner){
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + ' used ' + move[0] + '!</p>'
     if(Math.random() < move[3]){
         let power = move[2] += Math.floor(Math.random()*10);
