@@ -157,7 +157,7 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         power *= scale;
         //receiver.HP -=Math.floor(power);
       for(i=0; i<damagePoints.length; i++){
-        receiver.newHP -= receiver.HP - damagePoints;
+        receiver.newHP = receiver.HP - damagePoints;
         } return receiver.newHP
 
         document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
