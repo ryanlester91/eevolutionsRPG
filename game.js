@@ -124,8 +124,8 @@ for(i=0; i<4; i++){
 function attack(move, attacker, receiver, HP, newHP, owner){
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + ' used ' + move[0] + '!</p>'
     if(Math.random() < move[3]){
-        let power = move[2] += Math.floor(Math.random()*10);
-        let rtype = typeMatch[receiver.name];
+        //let power = move[2] += Math.floor(Math.random()*10);
+        //let rtype = typeMatch[receiver.name];
         let mtype = move[1];
         let scale = 1;
         let damagePoints = move[4];
@@ -154,12 +154,12 @@ function attack(move, attacker, receiver, HP, newHP, owner){
                 } break;
             }
         }*/
-        power *= scale;
+        //power *= scale;
         //receiver.HP -=Math.floor(power);
       
        if(HP > 0) {
         for(i=0; i<damagePoints.length; i++){
-        receiver.newHP -= receiver.HP - damagePoints;
+        receiver.newHP = receiver.HP - damagePoints;
         } return receiver.newHP
 
         document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
