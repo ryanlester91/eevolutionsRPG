@@ -163,10 +163,10 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         //} return receiver.newHP
 
         document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
-        attack();
+        //attack();
      
-       if(HP <=0){
-        checkWinner();
+       //if(HP <=0){
+        //checkWinner();
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
