@@ -167,7 +167,8 @@ function attack(move, attacker, receiver, HP, newHP, owner){
      
        //if(HP <=0){
         //checkWinner();
-    } else {
+    //} 
+       else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
         })
