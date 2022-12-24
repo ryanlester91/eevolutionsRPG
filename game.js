@@ -8,6 +8,7 @@ class Pokemon{
         this.moves = moves;
     }
 }
+//
 
 let pkmnList = [
     ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
