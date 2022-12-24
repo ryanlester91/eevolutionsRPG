@@ -8,7 +8,6 @@ class Pokemon{
         this.moves = moves;
     }
 }
-//
 
 let pkmnList = [
     ['Vaporeon', 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png', 360,
@@ -158,18 +157,17 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         power *= scale;
         //receiver.HP -=Math.floor(power);
       
-       //if(HP > 0) {
-        //for(i=0; i<damagePoints.length; i++){
-        receiver.newHP = receiver.HP - damagePoints;
-        //} return receiver.newHP
+       if(HP > 0) {
+        for(i=0; i<damagePoints.length; i++){
+        receiver.newHP -= receiver.HP - damagePoints;
+        } return receiver.newHP
 
         document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
-        //attack();
+        attack();
      
-       //if(HP <=0){
-        //checkWinner();
-    //} 
-       else {
+       if(HP <=0){
+        checkWinner();
+    } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
         })
@@ -187,5 +185,3 @@ function checkWinner(HP){
     } 
 
 }
-
-
