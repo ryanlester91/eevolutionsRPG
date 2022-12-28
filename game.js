@@ -113,15 +113,15 @@ for(i=0; i<4; i++){
     let move = pk1.moves[i];
     function addHandler(btn, move, pk1, pk2) {
         btn.addEventListener('click', function(e){
-            attack(move, pk1, pk2, 'hp2', '');
-            setTimeout(attack, 2000, pk2.moves[Math.floor(Math.random()*3)], pk2, pk1, 'hp1', 'Enemy ')
+            attack(move, pk1, pk2, '');
+            setTimeout(attack, 3000, pk2.moves[Math.floor(Math.random()*3)], pk2, pk1, 'Enemy ');
         })
     }
     addHandler(btn, move, pk1, pk2)
 }
 
 
-function attack(move, attacker, receiver, HP, newHP, owner){
+function attack(move, attacker, receiver, owner) {
     document.getElementById('comment').innerHTML = '<p> ' + owner + attacker.name + ' used ' + move[0] + '!</p>'
     if(Math.random() < move[3]){
         let power = move[2] += Math.floor(Math.random()*10);
@@ -130,49 +130,47 @@ function attack(move, attacker, receiver, HP, newHP, owner){
         let scale = 1;
         let damagePoints = move[4];
       
-        /*for(i=0; i<rtype.length; i++){
-            if(rtype[i].include(mtype)){
+        for(i=0; i<rtype.length; i++){
+            if(rtype[i].includes(mtype)){
                 switch(i){
                     case 0:
                         scale = 0;
                         setTimeout(function(){
                             document.getElementById('comment').innerHTML = '<p>It had no effect!</p>'
-                        }, 1000);
+                        }, 3000);
                         break;
                         case 1:
                         scale = 2;
                         setTimeout(function(){
                             document.getElementById('comment').innerHTML = '<p>It was super effective!</p>'
-                        }, 1000);
+                        }, 3000);
                         break;
                         case 2:
                         scale = 0.5;
                         setTimeout(function(){
                             document.getElementById('comment').innerHTML = '<p>It was not very effective!</p>'
-                        }, 1000);
+                        }, 3000);
                         break;
                 } break;
             }
-        }*/
+        }
         power *= scale;
         //receiver.HP -=Math.floor(power);
-      
-       if(HP > 0) {
-        for(i=0; i<damagePoints.length; i++){
-        receiver.newHP -= receiver.HP - damagePoints;
-        } return receiver.newHP
 
-        document.getElementById(HP).innerHTML = '<p>HP: ' + receiver.newHP + '/' + receiver.fullHP + '</p>';
-        attack();
-     
-       if(HP <=0){
+        receiver.HP -= damagePoints;
+       console.log(receiver);
+        document.getElementById('hp1').innerHTML = '<p>HP: ' + receiver.HP + '/' + receiver.fullHP + '</p>';
+        //attack(move, attacker, receiver, HP, newHP, owner);
+        if(receiver.HP <=0){
         checkWinner();
+    }
     } else {
         setTimeout(function(){
             document.getElementById('comment').innerHTML = '<p>Attack missed!</p>'
-        })
+        }, 3000);
     }
 }
+
 
 function checkWinner(HP){
     let f = (pk1.HP <= 0) ? pk1 : (pk2.HP <=0) ? pk2 : false;
@@ -181,7 +179,6 @@ function checkWinner(HP){
         document.getElementById(HP).innerHTML = '<p>HP: 0/' + f.fullHP + '</p>';
         setTimeout(function(){
             location.reload;
-        }, 1500)
-    } 
-
+        }, 3000);
+    }
 }
